@@ -1,0 +1,21 @@
+.seat-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 2px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .seat-btn.selected {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .seat-btn.booked {
+    background-color: #dc3545;
+    color: white;
+    cursor: not-allowed;
+  }
+  

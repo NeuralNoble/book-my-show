@@ -8,6 +8,7 @@ import moment from "moment";
 import { bookShow, makePayment } from "../calls/bookings";
 import StripeCheckout from "react-stripe-checkout";
 
+
 const BookShow = () => {
   const { user } = useSelector((state) => state.user);
   const dispatch = useDispatch();
@@ -46,7 +47,7 @@ const BookShow = () => {
           </p>
           <div className="screen-div"></div>
         </div>
-        <ul className="seat-ul justify-content-center">
+        <center><ul className="seat-ul  flex align-items-center">
           {Array.from(Array(rows).keys()).map((row) => {
             return Array.from(Array(columns).keys()).map((column) => {
               let seatNumber = row * columns + column + 1;
@@ -105,7 +106,7 @@ const BookShow = () => {
                 );
             });
           })}
-        </ul>
+        </ul></center>
 
         <div className="d-flex bottom-card justify-content-between w-100 max-width-600 mx-auto mb-25px mt-3">
           <div className="flex-1">
@@ -214,7 +215,7 @@ const BookShow = () => {
                   amount={selectedSeats.length * show.ticketPrice*100}
             
         
-                  stripeKey="pk_test_51JKPQWSJULHQ0FL7VOkMrOMFh0AHMoCFit29EgNlVRSvFkDxSoIuY771mqGczvd6bdTHU1EkhJpojOflzoIFGmj300Uj4ALqXa"
+                  stripeKey=""
                 >
                   {/* Use this one in some situation=> pk_test_eTH82XLklCU1LJBkr2cSDiGL001Bew71X8  */}
                   <div className="max-width-600 mx-auto">
